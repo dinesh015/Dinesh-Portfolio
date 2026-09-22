@@ -4,22 +4,28 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-	
-  <title>Dinesh Portfolio</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
+
+  <title>Dinesh Kumar - Portfolio</title>
+  <meta content="Portfolio of Dinesh Kumar - Product Owner and Developer" name="description">
+  <meta content="Product Owner, UX, Developer, Telematics, Agile" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icon Libraries: FontAwesome 6, Remixicon, & Boxicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -27,32 +33,217 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: MyResume - v2.1.0
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Custom Enhanced Effects Styling -->
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(135deg, #0563bb 0%, #00d2ff 100%);
+      --accent-color: #0563bb;
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --hover-transform: translateY(-6px);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif !important;
+      color: #2d3748;
+      background-color: #f8fafc;
+    }
+
+    h1, h2, h3, h4, h5, h6, .nav-menu a {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+
+    /* Glassmorphism Card Style */
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 16px;
+      box-shadow: var(--glass-shadow);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass-card:hover {
+      transform: var(--hover-transform);
+      box-shadow: 0 15px 35px rgba(5, 99, 187, 0.15);
+    }
+
+    /* Gradient Button Effect */
+    .btn-gradient {
+      background: var(--primary-gradient);
+      color: #fff !important;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 28px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 6px 20px rgba(5, 99, 187, 0.3);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-gradient:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(5, 99, 187, 0.45);
+    }
+
+    /* Social Icons Glow Effect */
+    .social-links a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #ffffff;
+      color: var(--accent-color);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--primary-gradient);
+      color: #ffffff;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(5, 99, 187, 0.35);
+    }
+
+    /* Enhanced Skills Progress Bars */
+    .skill-card {
+      padding: 18px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .skills .progress-bar {
+      background: var(--primary-gradient);
+      border-radius: 10px;
+      height: 8px;
+    }
+
+    .skills .progress {
+      height: 8px;
+      border-radius: 10px;
+      background-color: #e2e8f0;
+    }
+
+    /* Resume Timeline Enhancements */
+    .resume .resume-title {
+      font-weight: 700;
+      color: #0563bb;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .resume .resume-item {
+      padding: 0 0 25px 25px;
+      border-left: 2px solid #cbd5e1;
+      position: relative;
+    }
+
+    .resume .resume-item::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      left: -9px;
+      top: 2px;
+      background: #ffffff;
+      border: 3px solid #0563bb;
+      box-shadow: 0 0 10px rgba(5, 99, 187, 0.3);
+    }
+
+    /* Portfolio Card Effects */
+    .portfolio-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      transition: all 0.4s ease;
+    }
+
+    .portfolio-wrap:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+
+    .portfolio-wrap img {
+      transition: transform 0.5s ease;
+    }
+
+    .portfolio-wrap:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Contact Info Cards */
+    .info-box-card {
+      padding: 24px;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .info-box-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .info-box-card i {
+      font-size: 24px;
+      color: #ffffff;
+      background: var(--primary-gradient);
+      padding: 14px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(5, 99, 187, 0.25);
+    }
+
+    @media (max-width: 768px) {
+      #hero h1 {
+        font-size: 32px;
+      }
+      .glass-card {
+        padding: 20px !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- ======= Mobile nav toggle button ======= -->
-  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="ri-menu-3-line"></i></button>
 
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex flex-column justify-content-center">
-
     <nav class="nav-menu">
       <ul>
-        <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>HOME</span></a></li>
-        <li><a href="#about"><i class="bx bx-user"></i> <span>ABOUT</span></a></li>
-        <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>RESUME</span></a></li>
-        <li><a href="#portfolio"><i class="bx bx-book-content"></i> <span>ACHIEVEMENTS</span></a></li>
-        <li><a href="#contact"><i class="bx bx-envelope"></i> <span>CONTACT</span></a></li>
+        <li class="active"><a href="#hero"><i class="ri-home-4-line"></i> <span>HOME</span></a></li>
+        <li><a href="#about"><i class="ri-user-3-line"></i> <span>ABOUT</span></a></li>
+        <li><a href="#resume"><i class="ri-file-list-3-line"></i> <span>RESUME</span></a></li>
+        <li><a href="#portfolio"><i class="ri-award-line"></i> <span>ACHIEVEMENTS</span></a></li>
+        <li><a href="#contact"><i class="ri-mail-send-line"></i> <span>CONTACT</span></a></li>
       </ul>
-    </nav><!-- .nav-menu -->
-
+    </nav>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
@@ -60,11 +251,18 @@
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>DineshKumar P</h1>
       <p>I'm <span class="typed" data-typed-items="Product Owner, Designer, Developer, Photographer"></span></p>
-      <p><a class="btn btn-primary btn-learn" href="Dinesh..P.pdf" target="_blank"><strong>Download cv</strong><i class="icon-download"></i></a></p>
-      <div class="social-links">
-	<a href="https://codepen.io/dinesh015" class="codepen"><i class="bx bxl-codepen"></i></a>
-        <a href="https://www.instagram.com/dinesh_lovable_idiot/?hl=en" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/dinesh-kumar-aa1619188/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      
+      <div class="mt-4">
+        <a class="btn-gradient" href="Dinesh..P.pdf" target="_blank">
+          <span>Download CV</span>
+          <i class="ri-file-download-line"></i>
+        </a>
+      </div>
+
+      <div class="social-links mt-4">
+        <a href="https://codepen.io/dinesh015" class="codepen" target="_blank" title="CodePen"><i class="fa-brands fa-codepen"></i></a>
+        <a href="https://www.instagram.com/dinesh_lovable_idiot/?hl=en" class="instagram" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/dinesh-kumar-aa1619188/" class="linkedin" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -76,497 +274,338 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>ABOUT</h2>
-          <p>I’m a Product Owner with experience in turning business requirements into practical, customer-focused product solutions. I work closely with stakeholders, Engineering, UX, and QA teams to define requirements, prioritize backlogs, and drive products from discovery through delivery.
-<p>My experience includes PRDs, user stories, acceptance criteria, Agile/Scrum, UAT, API requirements, and data flows, with hands-on exposure to telematics and fleet management products. I’m passionate about simplifying complex business needs into clear product solutions and delivering meaningful outcomes through effective collaboration.</p>
+          <h2>About</h2>
+          <p>I’m a Product Owner with experience in turning business requirements into practical, customer-focused product solutions. I work closely with stakeholders, Engineering, UX, and QA teams to define requirements, prioritize backlogs, and drive products from discovery through delivery.</p>
+          <p class="mt-2">My experience includes PRDs, user stories, acceptance criteria, Agile/Scrum, UAT, API requirements, and data flows, with hands-on exposure to telematics and fleet management products.</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="assets/img/Dinesh.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>Product Owner &amp;UI/UX Designer &amp; Web Developer &amp; Software Developer</h3>
-            <p class="font-italic">
-              Personal Bio details are provided below
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 9 Nov 1999</li>                
-                  <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +91 8610864147</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Chennai, TamilNadu, India</li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="icofont-rounded-right"></i> <strong>Age:</strong>24</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong>MCA(Computer science)</li>
-                  <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> dksuriya15@gmail.com</li>
-                  <!--<li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>-->
-                </ul>
+        <div class="glass-card p-4 p-md-5">
+          <div class="row align-items-center">
+            <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
+              <img src="assets/img/Dinesh.jpg" class="img-fluid rounded-lg shadow-sm" alt="Dinesh Kumar" style="border-radius: 12px;">
+            </div>
+            <div class="col-lg-8 content">
+              <h3 class="mb-3" style="color: #0563bb; font-weight: 700;">Product Owner &amp; Developer</h3>
+              <p class="font-italic text-muted mb-4"><i class="ri-user-smile-line mr-1"></i> Personal Bio Details</p>
+              
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul class="list-unstyled">
+                    <li class="py-2 d-flex align-items-center gap-2"><i class="ri-cake-2-line text-primary"></i> <strong>Birthday:</strong> 9 Nov 1999</li>                
+                    <li class="py-2 d-flex align-items-center gap-2"><i class="ri-phone-line text-primary"></i> <strong>Phone:</strong> +91 8610864147</li>
+                    <li class="py-2 d-flex align-items-center gap-2"><i class="ri-map-pin-2-line text-primary"></i> <strong>City:</strong> Chennai, Tamil Nadu, India</li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul class="list-unstyled">
+                    <li class="py-2 d-flex align-items-center gap-2"><i class="ri-user-star-line text-primary"></i> <strong>Age:</strong> 24</li>
+                    <li class="py-2 d-flex align-items-center gap-2"><i class="ri-graduation-cap-line text-primary"></i> <strong>Degree:</strong> MCA (Computer Science)</li>
+                    <li class="py-2 d-flex align-items-center gap-2"><i class="ri-mail-line text-primary"></i> <strong>Email:</strong> dksuriya15@gmail.com</li>
+                  </ul>
+                </div>
               </div>
             </div>
-           </div>
+          </div>
         </div>
 
       </div>
     </section><!-- End About Section -->
-
-    <!-- ======= Facts Section =======
-    <section id="facts" class="facts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Facts</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="count-box">
-              <i class="icofont-simple-smile"></i>
-              <span data-toggle="counter-up">232</span>
-              <p>Happy Clients</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class="icofont-document-folder"></i>
-              <span data-toggle="counter-up">521</span>
-              <p>Projects</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="icofont-live-support"></i>
-              <span data-toggle="counter-up">1,463</span>
-              <p>Hours Of Support</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class="icofont-users-alt-5"></i>
-              <span data-toggle="counter-up">15</span>
-              <p>Hard Workers</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>End Facts Section -->
 
     <!-- ======= Skills Section ======= -->
     <section id="skills" class="skills section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>SKILLS</h2>
-          <p></p>
+          <h2>Skills</h2>
         </div>
 
         <div class="row skills-content">
+          <div class="col-lg-6">
+
+            <div class="skill-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="font-weight-bold"><i class="ri-bug-line text-primary mr-2"></i> Software Testing (Frontend &amp; Backend)</span>
+                <span class="badge badge-pill badge-primary">70%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="font-weight-bold"><i class="ri-file-text-line text-primary mr-2"></i> Requirements Gathering &amp; Acceptance Criteria</span>
+                <span class="badge badge-pill badge-primary">80%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="font-weight-bold"><i class="ri-cpu-line text-primary mr-2"></i> MCP</span>
+                <span class="badge badge-pill badge-primary">70%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="font-weight-bold"><i class="ri-html5-line text-primary mr-2"></i> HTML5 / CSS3</span>
+                <span class="badge badge-pill badge-primary">60%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
 
           <div class="col-lg-6">
 
-             <div class="progress">
-              <span class="skill"> Software testing Both front end and backend <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
+            <div class="skill-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="font-weight-bold"><i class="ri-database-2-line text-primary mr-2"></i> SQL</span>
+                <span class="badge badge-pill badge-primary">55%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="font-weight-bold"><i class="ri-code-s-slash-line text-primary mr-2"></i> Core Java</span>
+                <span class="badge badge-pill badge-primary">60%</span>
+              </div>
+              <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
-            <div class="progress">
-              <span class="skill">Acceptance criteria Document & Requirement gethering <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
+            <div class="skill-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="font-weight-bold"><i class="ri-terminal-box-line text-primary mr-2"></i> Base SAS Programming</span>
+                <span class="badge badge-pill badge-primary">60%</span>
+              </div>
+              <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
-            <div class="progress">
-              <span class="skill"> MCP <i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="skill-card">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="font-weight-bold"><i class="ri-leaf-line text-primary mr-2"></i> Spring Boot</span>
+                <span class="badge badge-pill badge-primary">40%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
-            <div class="progress">
-              <span class="skill">HTML <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-		  
-	    <div class="progress">
-              <span class="skill">SQL <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">CSS <i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Core java <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-		  
-	    <div class="progress">
-              <span class="skill">BaseSas Programming<i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">SpringBoot<i class="val">40%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
           </div>
-
         </div>
 
       </div>
     </section><!-- End Skills Section -->
 
-      <section id="resume" class="resume">
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>RESUME</h2>
-          <p>My Educational & Experience Lifeline Summary</p>
+          <h2>Resume</h2>
+          <p>Educational &amp; Professional Lifeline</p>
         </div>
 
         <div class="row">
+          <!-- Education Column -->
           <div class="col-lg-6">
-            <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-0">
-              <h4>Dinesh Kumar Purushothaman</h4>
-              <p><em> </em></p>
-              <ul>
-                <li>Chennai,TamilNadu</li>
-                <li>8610864147</li>
-              </ul>
+            <h3 class="resume-title"><i class="ri-book-open-line"></i> Education</h3>
+            
+            <div class="resume-item">
+              <h4>Post Graduation (MCA)</h4>
+              <h5>2020 - 2022</h5>
+              <p><em>B.S. Abdur Rahman Crescent Institute of Science and Technology</em></p>
+              <p>Completed Post Graduate degree in MCA with 7.9 CGPA.</p>
             </div>
 
-            <h3 class="resume-title">Education</h3>
             <div class="resume-item">
-              <h4>POST GRADUATION</h4>
-              <h5>2020 - 2022</h5>
-              <p><em>B.S.ABDUR RAHMAN CRESCENT INSTITUTE OF TECHNOLOGY</em></p>
-              <p>I have my Complete my post graduate degree in MCA at B.S.Abdur rahman crescent Institute Of Technology (Crescent University) with 7.9 CGPA </p>
-            </div>
-	    <div class="resume-item">
-              <h4>UNDER GRADUATION</h4>
+              <h4>Under Graduation (B.Sc CS)</h4>
               <h5>2017 - 2020</h5>
-              <p><em>SRM ARTS AND SCIENCE COLLEGE</em></p>
-              <p>I have Completed My Three years degree in B.S.C Computer Science with Applications at SRM Institute of Arts and Science College (University Of Madras)with 71.08% of score. </p>
+              <p><em>SRM Arts and Science College</em></p>
+              <p>Completed 3-year B.Sc Computer Science degree with 71.08% score.</p>
             </div>
+
             <div class="resume-item">
-              <h4>HIGHER SECONDARY GRADUCATION</h4>
+              <h4>Higher Secondary Education</h4>
               <h5>2015 - 2017</h5>
-              <p><em>C.S.I Corley Higher Secondary School</em></p>
-              <p>Completed my Higher Seconday Education at CSI Corley Higher secondary school(State Board Of Tamilnadu),Chennai with 70% of score. </p>
-            </div>
-            <div class="resume-item">
-              <h4>SECONDARY GRADUATION</h4>
-              <h5>2014 - 2015</h5>
-              <p><em>C.S.I Corley Higher Secondary School</em></p>
-              <p>Completed my Seconday Education at CSI Corley Higher secondary school(State Board Of Tamilnadu),Chennai with 73% of score. </p>
+              <p><em>C.S.I. Corley Higher Secondary School</em></p>
+              <p>Completed HSC under Tamil Nadu State Board with 70% score.</p>
             </div>
           </div>
 
-          <div class="row">
+          <!-- Experience Column -->
           <div class="col-lg-6">
-            <h3 class="resume-title">Experience</h3>
-            <div class="resume-item pb-0">
-              <h4>First Experience</h4>
-              <h5>October 2023 - March 2025</h5>
-              <p><em>Precise Pick Private Limited | Front-end Developer & Product Owner</em></p>
-              <p>Gathered and analyzed product requirements from cross-functional teams and business stakeholders to
-define product vision and prioritize features.
-Authored detailed Product Requirement Documents (PRDs), user stories, and functional specifications
-for Development and QA teams.
-Collaborated with designers, developers, and testers throughout the Software Development Life Cycle
-(SDLC) to ensure successful feature delivery.
-Designed and developed responsive web applications for Annex Go Getters Pvt. Ltd., improving client
-engagement by 30%.
-Built a React-based CMS enabling real-time content updates and improving operational efficiency by
-[add metric if available].
-Developed responsive web interfaces using HTML, CSS, and JavaScript, ensuring a seamless user
-experience across devices.
-Managed source code and release worflows using GitHub, enabling CI/CD pipelines and smoother
-collaboration.</p>
-            </div>
+            <h3 class="resume-title"><i class="ri-briefcase-4-line"></i> Experience</h3>
 
             <div class="resume-item">
-              <h4>Present Experience</h4>
+              <h4>Product Owner | Client: Caterpillar</h4>
               <h5>June 2025 - October 2026</h5>
-              <p><em>AI Infotech Private Limited | Product Owner | Client : Caterpillar</em></p>
-              <p><em>Visionlink Application</em></p>
-              <p>Gathered and analyzed business requirements from cross-functional stakeholders (Product, Engineering,
-UX, QA).
-Facilitated requirement elicitation workshops and stakeholder discussions to define product vision,
-business goals, and feature scope.
-Authored comprehensive Product Requirement Documents (PRDs), Functional Requirement
-Specifications (FRS), user stories, use cases, and acceptance criteria for Development and QA teams.
-Managed and prioritized product backlog using Agile (Scrum), resulting in [add metric: e.g., X% faster
-delivery or Y prioritized features released].
-Collaborated with Scrum Masters and development teams during Sprint Planning, Backlog Requirement,
-Sprint Reviews, and Retrospectives.
-Worked closely with UX designers to validate wireframes, workflows, and user experience before
-development.
-Performed requirement analysis, impact analysis, and gap analysis for new features and product
-enhancements.
-Coordinated with QA teams during User Acceptance Testing (UAT), defect triaging, regression testing,
-and release validation.
-Monitored feature delivery, tracked project milestones, and ensured timely release of product
-enhancements.
-Designed API requirements and data flows for telematics/Asset management products; collaborated with
-engineers on API contracts and data schemas.</p>
-            </div>
-
-           <!-- 
-           <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
-             <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
-               <ul>
-                 <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                 <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                 <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                 <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+              <p><em>AI Infotech Private Limited</em></p>
+              <p><strong>VisionLink Application</strong></p>
+              <ul class="pl-3">
+                <li>Elicited business requirements from stakeholders (Product, Engineering, UX, QA) to define product vision.</li>
+                <li>Authored PRDs, FRS, user stories, and acceptance criteria for Agile development.</li>
+                <li>Collaborated with UX designers to validate wireframes and workflows.</li>
+                <li>Designed API requirements and data flows for telematics/asset management products.</li>
               </ul>
             </div>
+
             <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+              <h4>Front-end Developer &amp; Product Owner</h4>
+              <h5>October 2023 - March 2025</h5>
+              <p><em>Precise Pick Private Limited</em></p>
+              <ul class="pl-3">
+                <li>Gathered requirements and authored PRDs/user stories for key features.</li>
+                <li>Designed responsive web applications and custom React CMS features.</li>
+                <li>Managed source code and release workflows via GitHub CI/CD pipelines.</li>
               </ul>
             </div>
           </div>
         </div>
 
       </div>
-    </section>End Resume Section -->
+    </section><!-- End Resume Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="Portfolio" class="Portfolio section-bg">
+    <section id="portfolio" class="portfolio section-bg">
       <div class="container" data-aos="fade-up">
 
-       <div class="section-title">
-          <h2>ACHIEVEMENTS</h2> 
-       </div>
-       
-       <div class="container" data-aos="fade-up" data-aos-delay="100">
-    
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="section-title">
+          <h2>Achievements</h2>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/QSP-CoreJava.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4></h4>
-                <p></p>
+              <img src="assets/img/portfolio/QSP-CoreJava.jpg" class="img-fluid" alt="Core Java Certificate">
+              <div class="portfolio-info d-flex align-items-center justify-content-between p-3" style="background: rgba(255,255,255,0.95);">
+                <span class="font-weight-bold" style="color:#2d3748;"><i class="ri-award-fill text-warning mr-1"></i> Core Java Certification</span>
                 <div class="portfolio-links">
-                  <a href="Portfolio/assets/img/portfolio/QSP-CoreJava.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class=""></i></a>
-                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class=""></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-	       
-	   <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/HackerrankSQL_basic certificate.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4></h4>
-                <p></p>
-                <div class="portfolio-links">
-                  <a href="Portfolio/assets/img/portfolio/HackerrankSQL_basic certificate.jpeg.jpeg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class=""></i></a>
+                  <a href="assets/img/portfolio/QSP-CoreJava.jpg" data-gall="portfolioGallery" class="venobox" title="Core Java Certificate"><i class="ri-fullscreen-line" style="font-size: 20px; color: #0563bb;"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4></h4>
-                <p></p>
+              <img src="assets/img/portfolio/HackerrankSQL_basic certificate.jpeg" class="img-fluid" alt="SQL Certificate">
+              <div class="portfolio-info d-flex align-items-center justify-content-between p-3" style="background: rgba(255,255,255,0.95);">
+                <span class="font-weight-bold" style="color:#2d3748;"><i class="ri-award-fill text-warning mr-1"></i> HackerRank SQL Basic</span>
                 <div class="portfolio-links">
-                  <a href="Portfolio/assets/img/portfolio/portfolio-7.jpeg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class=""></i></a>
+                  <a href="assets/img/portfolio/HackerrankSQL_basic certificate.jpeg" data-gall="portfolioGallery" class="venobox" title="SQL Certificate"><i class="ri-fullscreen-line" style="font-size: 20px; color: #0563bb;"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/QSP-CoreJava.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4></h4>
-                <p></p>
+              <img src="assets/img/portfolio/portfolio-7.jpeg" class="img-fluid" alt="Achievement">
+              <div class="portfolio-info d-flex align-items-center justify-content-between p-3" style="background: rgba(255,255,255,0.95);">
+                <span class="font-weight-bold" style="color:#2d3748;"><i class="ri-award-fill text-warning mr-1"></i> Achievement Certificate</span>
                 <div class="portfolio-links">
-                  <a href="Portfolio/assets/img/portfolio/QSP-CoreJava.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class=""></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4></h4>
-                <p></p>
-                <div class="portfolio-links">
-                  <a href="Portfolio/assets/img/portfolio/portfolio-4.jpeg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class=""></i></a>
+                  <a href="assets/img/portfolio/portfolio-7.jpeg" data-gall="portfolioGallery" class="venobox" title="Achievement"><i class="ri-fullscreen-line" style="font-size: 20px; color: #0563bb;"></i></a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4></h4>
-                <p></p>
-                <div class="portfolio-links">
-                  <a href="Portfolio/assets/img/portfolio/portfolio-6.jpeg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class=""></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-	  
-	  <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4></h4>
-                <p></p>
-                <div class="portfolio-links">
-                  <a href="Portfolio/assets/img/portfolio/portfolio-5.jpeg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class=""></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4></h4>
-                <p></p>
-                <div class="portfolio-links">
-                  <a href="portfolio/assets/img/portfolio/portfolio-9.jpeg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Portfolio Details"><i class=""></i></a>
-                </div>
-                
-              </div>
-              
-            </div>
-            
-          </div>
-         
       </div>
     </section><!-- End Portfolio Section -->
-	 
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>CONTACT</h2>
+          <h2>Contact</h2>
         </div>
 
         <div class="row mt-1">
-
           <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="icofont-google-map"></i>
-                <h4>Location:</h4>
-                <p>Plot no:7 Roja Thottam Second Street,Irumbuliyur,Tambaram,Chennai-600059</p>
-              </div>
-
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
-                <p>dksuriya15@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="icofont-phone"></i>
-                <h4>Call:</h4>
-                <p>+91 8610864147</p>
-              </div>
-              
-            </div>
             
+            <div class="info-box-card">
+              <i class="ri-map-pin-line"></i>
+              <div>
+                <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Location:</h4>
+                <p class="mb-0 text-muted" style="font-size: 14px;">Plot no:7 Roja Thottam Second Street, Irumbuliyur, Tambaram, Chennai - 600059</p>
+              </div>
+            </div>
+
+            <div class="info-box-card">
+              <i class="ri-mail-send-line"></i>
+              <div>
+                <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Email:</h4>
+                <p class="mb-0 text-muted" style="font-size: 14px;">dksuriya15@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="info-box-card">
+              <i class="ri-phone-line"></i>
+              <div>
+                <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 4px;">Call:</h4>
+                <p class="mb-0 text-muted" style="font-size: 14px;">+91 8610864147</p>
+              </div>
+            </div>
+
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-            
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+            <div class="glass-card p-4">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="form-row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control rounded-lg" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <div class="validate"></div>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="email" class="form-control rounded-lg" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                    <div class="validate"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control rounded-lg" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                   <div class="validate"></div>
                 </div>
-                <div class="col-md-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email 4" />
+                <div class="form-group">
+                  <textarea class="form-control rounded-lg" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validate"></div>
                 </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-            
+                <div class="mb-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn-gradient">
+                    <span>Send Message</span>
+                    <i class="ri-send-plane-fill"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-          
         </div>
-        
+
       </div>
     </section><!-- End Contact Section -->
 
@@ -576,26 +615,21 @@ engineers on API contracts and data schemas.</p>
   <footer id="footer">
     <div class="container">
       <h3>Dinesh Kumar Purushothaman</h3>
-      <p>Who We Are Is Not Important ✨ Only What We are Capable Of Creates An Impact 💯</p>
-      <div class="social-links">
-        <a href="https://codepen.io/dinesh015" class="codepen"><i class="bx bxl-codepen"></i></a>
-        <a href="https://www.instagram.com/dinesh_lovable_idiot/?hl=en" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/dinesh-kumar-aa1619188/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      <p>Who We Are Is Not Important ✨ Only What We Are Capable Of Creates An Impact 💯</p>
+      
+      <div class="social-links my-3">
+        <a href="https://codepen.io/dinesh015" class="codepen" target="_blank" title="CodePen"><i class="fa-brands fa-codepen"></i></a>
+        <a href="https://www.instagram.com/dinesh_lovable_idiot/?hl=en" class="instagram" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/dinesh-kumar-aa1619188/" class="linkedin" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
+      
       <div class="copyright">
-        &copy; Copyright <strong><span>bootcamp</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: [license-url] -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
-        Designed by <a href="https://bootstrapmade.com/">Dinesh Kumar</a>
+        &copy; Copyright <strong><span>Dinesh Kumar</span></strong>. All Rights Reserved
       </div>
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-s-line"></i></a>
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
